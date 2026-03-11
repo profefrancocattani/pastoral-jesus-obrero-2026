@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuentros Primaria 2026 - Jesús Obrero</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            luster: '#F4F1EC',
+            aster: '#9BACD8',
+            habanero: '#F98513',
+            jodhpur: '#DAD1C8',
+            space: '#223382',
+            deadly: '#111144',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: #F4F1EC; }
+    @media print {
+      body { background-color: #F4F1EC !important; }
+      .no-print { display: none !important; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+  </style>
+</head>
+<body class="text-deadly p-4 md:p-8 selection:bg-habanero selection:text-white">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Encabezado -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b-2 pb-6 border-jodhpur">
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-2 h-12 bg-habanero"></div>
+        <h1 class="text-4xl font-bold text-deadly tracking-tight">2026</h1>
+        <p class="text-space font-medium mt-1 tracking-wide uppercase text-sm">Encuentros de Catequesis &mdash; Primaria
+          <span class="text-deadly/50 lowercase ml-1">Jesús Obrero</span>
+        </p>
+      </div>
+      <div class="flex gap-3 mt-6 md:mt-0 no-print">
+        <a href="index.html" class="bg-space hover:bg-[#1a2661] text-white font-semibold py-2.5 px-5 rounded shadow-md transition flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+          Volver
+        </a>
+        <button onclick="window.print()" class="bg-habanero hover:bg-[#e07710] text-white font-semibold py-2.5 px-5 rounded shadow-md transition flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabla de Encuentros -->
+    <div class="bg-white/80 border border-jodhpur/50 rounded shadow-sm overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-jodhpur text-deadly uppercase tracking-widest text-xs">
+            <th class="py-3 px-4 text-left font-bold">Grado</th>
+            <th class="py-3 px-4 text-left font-bold">Día</th>
+            <th class="py-3 px-4 text-left font-bold">Horario</th>
+            <th class="py-3 px-4 text-left font-bold">Catequista</th>
+            <th class="py-3 px-4 text-left font-bold">Observaciones</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-jodhpur/40">
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">1ro</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">09:00 - 10:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">2do</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">09:00 - 10:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">3ro</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">10:00 - 11:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">4to</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">10:00 - 11:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">5to</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">11:00 - 12:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">6to</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">11:00 - 12:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+          <tr class="hover:bg-luster/60 transition">
+            <td class="py-3 px-4 font-bold text-deadly">7mo</td>
+            <td class="py-3 px-4">Sábado</td>
+            <td class="py-3 px-4 font-mono text-space">11:00 - 12:00</td>
+            <td class="py-3 px-4"></td>
+            <td class="py-3 px-4 text-deadly/50"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-deadly/40 mt-6 text-center">Equipo Pastoral Jesús Obrero &mdash; 2026</p>
+  </div>
+</body>
+</html>
