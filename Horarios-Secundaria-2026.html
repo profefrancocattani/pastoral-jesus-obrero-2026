@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Pastoral Jesús Obrero 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 1. PALETA DE COLORES Y VARIABLES */
+        :root {
+            --bg-page: #F8F9FA;
+            --text-main: #2B2B2B;
+            --azul-acero: #4682B4;   /* Franco */
+            --verde-salvia: #728C69; /* Mauro */
+            --terracota: #E2725B;    /* Mayra / Equipo Pastoral */
+            --btn-bg: #6C757D;
+            --btn-hover: #5A6268;
+            --border-light: #DEE2E6;
+        }
+
+        /* 2. TIPOGRAFÍA Y RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            font-family: 'Fira Code', monospace; /* Default para datos duros */
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        /* Títulos y Encabezados (Sans Serif Pesada) */
+        h1, h2, h3, th, .action-btn {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Fira Code', monospace;
+            color: var(--btn-bg);
+            margin-bottom: 2rem;
+        }
+
+        h2.section-divider {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--text-main);
+            padding-bottom: 0.5rem;
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-badge {
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        /* 4. BOTONES Y ENLACES */
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            background-color: var(--btn-bg);
+            color: #FFFFFF;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .action-btn:hover {
+            background-color: var(--btn-hover);
+        }
+
+        /* TABLAS Y ESTRUCTURA MINIMALISTA */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+        }
+
+        th {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            padding: 1rem;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border-bottom: 2px solid var(--text-main);
+            text-align: left;
+        }
+
+        td {
+            padding: 0.75rem;
+            border: 1px solid var(--border-light);
+            vertical-align: top;
+            min-width: 140px;
+        }
+
+        .time-col {
+            font-weight: 700;
+            color: var(--btn-bg);
+            min-width: 120px;
+            text-align: center;
+            background-color: var(--bg-page);
+            border-right: 2px solid var(--border-light);
+        }
+
+        .subject {
+            display: block;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .teacher {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        /* 3. PESO VISUAL: SISTEMA DE TAREAS (El Actor) */
+        .actor-franco {
+            background-color: var(--azul-acero);
+            color: #FFFFFF;
+            border-color: var(--azul-acero);
+        }
+
+        .actor-mauro {
+            background-color: var(--verde-salvia);
+            color: #FFFFFF;
+            border-color: var(--verde-salvia);
+        }
+
+        .actor-mayra {
+            background-color: var(--terracota);
+            color: #FFFFFF;
+            border-color: var(--terracota);
+        }
+
+        /* Limpiamos la decoración visual innecesaria */
+        .neutral-cell {
+            background-color: transparent;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 1200px; margin: 0 auto;">
+        
+        <header>
+            <h1>HORARIOS SECUNDARIA 2026</h1>
+            <p class="subtitle">> Jesús Obrero | Escuela Secundaria </p>
+        </header>
+
+        <!-- Barra de Herramientas (Botones Accionables) -->
+        <div class="toolbar">
+            <button class="action-btn">***</button>
+            <button class="action-btn">***</button>
+            <button class="action-btn">***</button>
+            <button class="action-btn">***</button>
+        </div>
+
+        <!-- LEYENDA TÁCTICA -->
+        <div style="display: flex; gap: 15px; margin-bottom: 2rem; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700;">
+            <span style="display: flex; align-items: center; gap: 5px;"><div style="width: 12px; height: 12px; background: var(--azul-acero); border-radius: 2px;"></div> FRANCO</span>
+            <span style="display: flex; align-items: center; gap: 5px;"><div style="width: 12px; height: 12px; background: var(--verde-salvia); border-radius: 2px;"></div> MAURO</span>
+        </div>
+
+        <!-- CICLO BÁSICO - DIVISIÓN A -->
+        <h2 class="section-divider">Ciclo Básico - Turno Mañana (Div. A)</h2>
+
+        <!-- 1º AÑO A -->
+        <div class="course-badge">1RO A</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">NATURALES</span><span class="teacher">Rodriguez Carolina</span></td><td><span class="subject">NATURALES</span><span class="teacher">Rodriguez Carolina</span></td><td><span class="subject">LENGUA</span><span class="teacher">Staffieri Lorena</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Vergara Florencia</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">NATURALES</span><span class="teacher">Rodriguez Carolina</span></td><td><span class="subject">NATURALES</span><span class="teacher">Rodriguez Carolina</span></td><td><span class="subject">LENGUA</span><span class="teacher">Staffieri Lorena</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Vergara Florencia</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td><span class="subject">LENGUA</span><span class="teacher">Staffieri Lorena</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumarraga Alejandra</span></td><td><span class="subject">INGLÉS</span><span class="teacher">Taddei Analia</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">LENGUA</span><span class="teacher">Staffieri Lorena</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumarraga Alejandra</span></td><td><span class="subject">INGLÉS</span><span class="teacher">Taddei Analia</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Letelier Paola</span></td><td class="actor-mauro"><span class="subject">CATEQUESIS</span><span class="teacher">Fernandez Mauro</span></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Letelier Paola</span></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2º AÑO A -->
+        <div class="course-badge">2DO A</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">Taddei Analia</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodriguez Carolina</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">Taddei Analia</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodriguez Carolina</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td class="actor-mauro"><span class="subject">CATEQUESIS</span><span class="teacher">Fernandez Mauro</span></td><td><span class="subject">CONST. CIUD</span><span class="teacher">Andujar Mariana</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">FISICO QUIMICA</span><span class="teacher">Pinasco Evelyn</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumarraga Alejandra</span></td><td><span class="subject">CONST. CIUD</span><span class="teacher">Andujar Mariana</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">FISICO QUIMICA</span><span class="teacher">Pinasco Evelyn</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td><span class="subject">ED FISICA</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumarraga Alejandra</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td><span class="subject">ED FISICA</span></td><td></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 3º AÑO A -->
+        <div class="course-badge">3RO A</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodriguez Carolina</span></td><td class="actor-franco"><span class="subject">C. CIUDADANÍA</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">FISICO QUIMICA</span><span class="teacher">Ortiz Verónica</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodriguez Carolina</span></td><td class="actor-franco"><span class="subject">C. CIUDADANÍA</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">FISICO QUIMICA</span><span class="teacher">Ortiz Verónica</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Paladino Valeria</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td class="actor-mauro"><span class="subject">CATEQUESIS</span><span class="teacher">Fernandez Mauro</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Ballan Antonella</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">LENGUA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Ballan Antonella</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Vergara Florencia</span></td><td></td><td></td><td><span class="subject">ED FISICA</span></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td></td><td><span class="subject">HISTORIA</span><span class="teacher">Vergara Florencia</span></td><td></td><td></td><td><span class="subject">ED FISICA</span></td></tr>
+                    <tr><td class="time-col">15:00 - 16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">16:00 - 17:00</td><td></td><td><span class="subject">AULA 4</span></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-divider">Ciclo Básico - Turno Tarde (Div. B)</h2>
+        
+        <!-- 1º AÑO B -->
+        <div class="course-badge">1RO B</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">10:00 - 11:00</td><td></td><td><span class="subject">ED FISICA</span></td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td></td><td><span class="subject">ED FISICA</span></td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td></td><td></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumárraga Alejandra</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">NATURALES</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">NATURALES</span><span class="teacher">Coronel Cynthia</span></td></tr>
+                    <tr><td class="time-col">14:30 - 15:30</td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">NATURALES</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">NATURALES</span><span class="teacher">Coronel Cynthia</span></td></tr>
+                    <tr><td class="time-col">15:30 - 16:30</td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Letelier Paola</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Righetti Liliana</span></td><td class="actor-franco"><span class="subject">CATEQUESIS</span><span class="teacher">Cattani Franco</span></td></tr>
+                    <tr><td class="time-col">16:45 - 17:45</td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Letelier Paola</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">SOCIALES</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumárraga Alejandra</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2º AÑO B -->
+        <div class="course-badge">2DO B</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">10:00 - 11:00</td><td></td><td><span class="subject">AULA 1</span></td><td></td><td><span class="subject">ED FISICA</span></td><td></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td></td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumárraga Alejandra</span></td><td class="actor-franco"><span class="subject">CATEQUESIS</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Zumárraga Alejandra</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td><span class="subject">GEOGRAFÍA</span><span class="teacher">Adrián Cardillo</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">FISICOQUÍMICA</span><span class="teacher">Pinasco Evelyn</span></td></tr>
+                    <tr><td class="time-col">14:30 - 15:30</td><td><span class="subject">GEOGRAFÍA</span><span class="teacher">Adrián Cardillo</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Hernández Miriam</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">FISICOQUÍMICA</span><span class="teacher">Pinasco Evelyn</span></td></tr>
+                    <tr><td class="time-col">15:30 - 16:30</td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Paola Letelier</span></td></tr>
+                    <tr><td class="time-col">16:45 - 17:45</td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">LENGUA</span><span class="teacher">Colo Mariela</span></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Paola Letelier</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 3º AÑO B -->
+        <div class="course-badge">3RO B</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">08:00 - 09:00</td><td></td><td></td><td></td><td><span class="subject">EDUC FÍSICA</span><span class="teacher">Ventura Silvana</span></td><td></td></tr>
+                    <tr><td class="time-col">09:00 - 10:00</td><td></td><td></td><td></td><td><span class="subject">EDUC FÍSICA</span><span class="teacher">Ventura Silvana</span></td><td></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td></td><td></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Díaz Carlos</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Ballán Antonela</span></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td><span class="subject">FISICOQUÍMICA</span><span class="teacher">Ortiz Verónica</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Valenzuela Melina</span></td><td><span class="subject">CIUDADANÍA</span><span class="teacher">Díaz Carlos</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Valenzuela Melina</span></td><td><span class="subject">ARTÍSTICA</span><span class="teacher">Ballán Antonela</span></td></tr>
+                    <tr><td class="time-col">14:30 - 15:30</td><td><span class="subject">FISICOQUÍMICA</span><span class="teacher">Ortiz Verónica</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Valenzuela Melina</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Valenzuela Melina</span></td><td class="actor-franco"><span class="subject">CATEQUESIS</span><span class="teacher">Cattani Franco</span></td></tr>
+                    <tr><td class="time-col">15:30 - 16:30</td><td><span class="subject">GEOGRAFÍA</span><span class="teacher">Adrián Cardillo</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">LENGUA</span><span class="teacher">Grosso Lucrecia</span></td><td><span class="subject">LENGUA</span><span class="teacher">Grosso Lucrecia</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Coronel Cynthia</span></td></tr>
+                    <tr><td class="time-col">16:45 - 17:45</td><td><span class="subject">GEOGRAFÍA</span><span class="teacher">Adrián Cardillo</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">LENGUA</span><span class="teacher">Grosso Lucrecia</span></td><td><span class="subject">LENGUA</span><span class="teacher">Grosso Lucrecia</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Coronel Cynthia</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-divider">Ciclo Superior - Turno Mañana (Div. U)</h2>
+
+        <!-- 4º U -->
+        <div class="course-badge">4TO U</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td><span class="subject">LITERATURA</span><span class="teacher">Grosso Lucrecia</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">NTICX</span><span class="teacher">Mojsa Juan</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodríguez Carolina</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td><span class="subject">LITERATURA</span><span class="teacher">Grosso Lucrecia</span></td><td class="actor-mauro"><span class="subject">CATEQUESIS</span><span class="teacher">Fernández Mauro</span></td><td><span class="subject">NTICX</span><span class="teacher">Mojsa Juan</span></td><td><span class="subject">BIOLOGÍA</span><span class="teacher">Rodríguez Carolina</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td><span class="subject">PSICOLOGÍA</span><span class="teacher">Solís Vanesa</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte</span></td><td><span class="subject">INTR. FÍSICA</span><span class="teacher">Hernández Miriam</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">PSICOLOGÍA</span><span class="teacher">Solís Vanesa</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td><span class="subject">SALUD</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte</span></td><td><span class="subject">INTR. FÍSICA</span><span class="teacher">Hernández Miriam</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td></td><td><span class="subject">SALUD</span><span class="teacher">Coronel Cynthia</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte</span></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td></td><td></td><td><span class="subject">LITERATURA</span><span class="teacher">Grosso Lucrecia</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">15:30 - 16:30</td><td></td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td></td></tr>
+                    <tr><td class="time-col">16:30 - 17:30</td><td></td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 5º U -->
+        <div class="course-badge">5TO U</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td class="actor-franco"><span class="subject">SOCIOLOGÍA</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">POLÍTICA</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">LITERATURA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ECONOMÍA</span><span class="teacher">García Georgina</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td class="actor-franco"><span class="subject">SOCIOLOGÍA</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">POLÍTICA</span><span class="teacher">Vergara Florencia</span></td><td><span class="subject">LITERATURA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td><td><span class="subject">ECONOMÍA</span><span class="teacher">García Georgina</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td><span class="subject">GEOGRAFÍA</span></td><td class="actor-franco"><span class="subject">SOCIOLOGÍA</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">COMUNICACIÓN</span><span class="teacher">Díaz Carlos</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">QUÍMICA</span><span class="teacher">Ortiz Verónica</span></td><td class="actor-franco"><span class="subject">CATEQUESIS</span><span class="teacher">Cattani Franco</span></td><td><span class="subject">COMUNICACIÓN</span><span class="teacher">Díaz Carlos</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td><span class="subject">QUÍMICA</span><span class="teacher">Ortiz Verónica</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td><td></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">14:15 - 15:15</td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">15:15 - 16:15</td><td></td><td></td><td><span class="subject">ED FISICA</span></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 6º U -->
+        <div class="course-badge">6TO U</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horario</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="time-col">07:30 - 08:30</td><td><span class="subject">FILOSOFÍA</span><span class="teacher">Solís Vanesa</span></td><td class="actor-mauro"><span class="subject">CATEQUESIS</span><span class="teacher">Hernández Mauro</span></td><td><span class="subject">ARTE</span><span class="teacher">Zumárraga Alejandra</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td></tr>
+                    <tr><td class="time-col">08:30 - 09:30</td><td><span class="subject">FILOSOFÍA</span><span class="teacher">Solís Vanesa</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">ARTE</span><span class="teacher">Zumárraga Alejandra</span></td><td><span class="subject">HISTORIA</span><span class="teacher">Hernández Gabriel</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td></tr>
+                    <tr><td class="time-col">09:45 - 10:45</td><td><span class="subject">LITERATURA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">GEOGRAFÍA</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td><td><span class="subject">PROYECTO</span><span class="teacher">Andújar Mariana</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td></tr>
+                    <tr><td class="time-col">11:00 - 12:00</td><td><span class="subject">LITERATURA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">TRABAJO</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">MATEMÁTICA</span><span class="teacher">Belmonte Gretel</span></td><td><span class="subject">PROYECTO</span><span class="teacher">Andújar Mariana</span></td><td><span class="subject">INGLÉS</span><span class="teacher">López Jésica</span></td></tr>
+                    <tr><td class="time-col">12:15 - 13:15</td><td></td><td><span class="subject">TRABAJO</span><span class="teacher">Righetti Liliana</span></td><td><span class="subject">PROYECTO</span><span class="teacher">Andújar Mariana</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">13:15 - 14:15</td><td></td><td><span class="subject">LITERATURA</span><span class="teacher">Cafaro Julieta</span></td><td><span class="subject">PROYECTO</span><span class="teacher">Andújar Mariana</span></td><td></td><td></td></tr>
+                    <tr><td class="time-col">14:15 - 15:15</td><td><span class="subject">ED FISICA</span></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td class="time-col">15:15 - 16:15</td><td><span class="subject">ED FISICA</span></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
