@@ -449,6 +449,225 @@
         </div>
     </div>
 
+<!-- ============================================================ -->
+<!-- FICHA: JUEVES SANTO | Fecha: 31 de marzo de 2026            -->
+<!-- ============================================================ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jueves Santo - Catequesis | Jesús Obrero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f59e0b',
+                        secondary: '#14b8a6',
+                        accent: '#fbbf24',
+                        background: '#fdfcfb',
+                        earthy: {
+                            50: '#fef7ee',
+                            100: '#fcf0dc',
+                            200: '#f7dab4',
+                            800: '#43302b',
+                            900: '#2a1e1b',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdfcfb;
+            background-image: radial-gradient(#f7dab4 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .anexo-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .a4-sheet {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: white;
+            padding: 25mm 20mm;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .match-word {
+            position: relative;
+        }
+        .match-word::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #f59e0b;
+            border-radius: 50%;
+        }
+        .match-box {
+            position: relative;
+        }
+        .match-box::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #14b8a6;
+            border-radius: 50%;
+        }
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            body * {
+                visibility: hidden;
+            }
+            #printable-area, #printable-area * {
+                visibility: visible;
+            }
+            #printable-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+                padding: 15mm;
+                box-shadow: none;
+                width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-earthy-800 antialiased min-h-screen">
+
+    <header class="no-print pt-12 pb-8 px-6 text-center max-w-4xl mx-auto">
+        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase bg-earthy-100 text-primary rounded-full">
+            Material de Aula | 1er Ciclo
+        </span>
+        <h1 class="font-display text-4xl font-extrabold mb-4 text-earthy-900">
+            Ficha: El Jueves Santo
+        </h1>
+        <p class="text-lg text-earthy-800/70 mb-8 max-w-2xl mx-auto">
+            Versión optimizada de la actividad. Se reemplazaron las imágenes prediseñadas por cajas de dibujo para incentivar la participación activa de los alumnos.
+        </p>
+        <button onclick="window.print()" class="inline-flex items-center gap-2 bg-earthy-900 hover:bg-earthy-800 text-white font-bold py-3 px-8 rounded-2xl shadow-xl transition-all hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Imprimir Fotocopia
+        </button>
+    </header>
+
+    <main class="anexo-wrapper">
+        <div id="printable-area" class="a4-sheet rounded-3xl">
+            
+            <div class="text-center mb-10">
+                <h1 class="font-display text-5xl font-black text-earthy-900 tracking-tight uppercase" style="letter-spacing: 0.05em;">
+                    El Jueves Santo
+                </h1>
+                <div class="w-24 h-1.5 bg-primary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-earthy-50 border-l-4 border-primary p-4 rounded-r-xl mb-12">
+                <p class="font-bold text-lg text-earthy-800">
+                    <span class="text-primary font-black mr-2">1.</span> Uní con flechas cada palabra con su recuadro.<br>
+                    <span class="text-primary font-black mr-2">2.</span> ¡Convertite en artista! Dibujá cada elemento en el recuadro que le corresponde.
+                </p>
+            </div>
+
+            <div class="flex justify-between items-center px-4 mb-16">
+                
+                <div class="flex flex-col gap-12 w-1/3">
+                    <div class="match-word">
+                        <h2 class="font-display text-3xl font-bold text-earthy-900 uppercase">Jesús</h2>
+                    </div>
+                    <div class="match-word">
+                        <h2 class="font-display text-3xl font-bold text-earthy-900 uppercase">Los Amigos</h2>
+                    </div>
+                    <div class="match-word">
+                        <h2 class="font-display text-3xl font-bold text-earthy-900 uppercase">La Mesa</h2>
+                    </div>
+                    <div class="match-word">
+                        <h2 class="font-display text-3xl font-bold text-earthy-900 uppercase">El Pan y<br>El Vino</h2>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-8 w-1/2 items-end">
+                    <div class="match-box w-full max-w-[220px] aspect-[4/3] rounded-2xl border-4 border-dashed border-earthy-200 bg-white flex items-center justify-center p-4 text-center">
+                        <span class="text-earthy-800/40 font-bold text-sm uppercase tracking-widest">[Imagen de<br>Los Amigos]</span>
+                    </div>
+                    <div class="match-box w-full max-w-[220px] aspect-[4/3] rounded-2xl border-4 border-dashed border-earthy-200 bg-white flex items-center justify-center p-4 text-center">
+                        <span class="text-earthy-800/40 font-bold text-sm uppercase tracking-widest">[Imagen de<br>El Pan y el Vino]</span>
+                    </div>
+                    <div class="match-box w-full max-w-[220px] aspect-[4/3] rounded-2xl border-4 border-dashed border-earthy-200 bg-white flex items-center justify-center p-4 text-center">
+                        <span class="text-earthy-800/40 font-bold text-sm uppercase tracking-widest">[Imagen de<br>Jesús]</span>
+                    </div>
+                    <div class="match-box w-full max-w-[220px] aspect-[4/3] rounded-2xl border-4 border-dashed border-earthy-200 bg-white flex items-center justify-center p-4 text-center">
+                        <span class="text-earthy-800/40 font-bold text-sm uppercase tracking-widest">[Imagen de<br>La Mesa]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mt-auto mb-12 flex justify-center">
+                <svg class="absolute inset-0 w-full h-full text-secondary/10 -z-10 scale-[1.8] origin-center" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <div class="bg-white/90 p-8 rounded-3xl max-w-lg text-center border-2 border-secondary/20 relative z-10 shadow-sm">
+                    <p class="font-display font-semibold text-lg leading-relaxed text-earthy-900 uppercase">
+                        "En la última cena que Jesús celebró con sus discípulos antes de morir, dio gracias y partió el pan. Entonces dijo: <span class="text-secondary font-black">Esto es mi cuerpo, el cual es entregado por ustedes. Hagan esto en memoria mía.</span>"
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-4 pt-6 border-t-2 border-dashed border-earthy-200">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl shrink-0">?</div>
+                    <div class="flex-1">
+                        <p class="font-display font-bold text-xl text-earthy-900 mb-2">
+                            Jesús preparó una mesa grande para estar con sus amigos.
+                        </p>
+                        <p class="text-lg text-earthy-800 flex items-end gap-2">
+                            ¿A qué compañero de la clase invitás a sentarse en tu mesa hoy? <span class="flex-1 border-b-2 border-earthy-800 inline-block h-6 min-w-[150px]"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
+
 </body>
 
 </html>
